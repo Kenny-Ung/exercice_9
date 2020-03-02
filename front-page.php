@@ -60,11 +60,11 @@ get_header();
 				echo "<h2 class=\"nouvelle\">".category_description(get_category_by_slug("nouvelle"))."</h2>";
 
 				/* The 2nd Query (without global var) */
-				$args2 = array(
-					"category_name" => "nouvelle",
-					"posts_per_page" => 4
-				);
-				$query2 = new WP_Query( $args2 );
+				// $args2 = array(
+				// 	"category_name" => "nouvelle",
+				// 	"posts_per_page" => 4
+				// );
+				//  $query2 = new WP_Query( $args2 );
 				
 				// The 2nd Loop
 				while ( $query2->have_posts() ) {
