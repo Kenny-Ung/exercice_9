@@ -8,3 +8,8 @@
  */
 
 ?>
+
+    <?php the_post_thumbnail("thumbnail"); ?>
+        <?php echo "<p>". get_the_date("j") ."</p>" ?>
+        <?php echo "<p>". get_the_date("m") ."</p>" ?>
+        <?php echo "<p>". get_the_date("y") ."</p>" ?>
