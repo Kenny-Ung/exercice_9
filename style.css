@@ -92,7 +92,7 @@
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-#evenements {
+#evenement {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -102,7 +102,7 @@
   border: 1px solid black;
 }
 
-#evenements h2 {
+#evenement h2 {
   border: 1px solid black;
   font-size: 1em;
 }
