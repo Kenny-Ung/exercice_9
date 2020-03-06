@@ -33,7 +33,9 @@ get_header();
 				// The Query
 				$args = array(
 					"category_name" => "conference",
-					'posts_per_page' => 5
+					'posts_per_page' => 5,
+					"orderby" => "date",
+					"order" => "ASC"
 				);
 				$query1 = new WP_Query( $args );
 				
@@ -60,11 +62,11 @@ get_header();
 				echo "<h2 class=\"nouvelle\">".category_description(get_category_by_slug("nouvelle"))."</h2>";
 
 				/* The 2nd Query (without global var) */
-				// $args2 = array(
-				// 	"category_name" => "nouvelle",
-				// 	"posts_per_page" => 4
-				// );
-				//  $query2 = new WP_Query( $args2 );
+				$args2 = array(
+					"category_name" => "nouvelle",
+					"posts_per_page" => 4
+				);
+				$query2 = new WP_Query( $args2 );
 				
 				// The 2nd Loop
 				while ( $query2->have_posts() ) {
@@ -75,6 +77,7 @@ get_header();
 				
 				// Restore original Post Data
 				wp_reset_postdata();
+				get_template_part('category-evenement');
 			?>
 		</section>
 
